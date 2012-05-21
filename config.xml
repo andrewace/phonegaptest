@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns		= "http://www.w3.org/ns/widgets"
 	xmlns:gap	= "http://phonegap.com/ns/1.0"
-	id		= "com.andrewace.test"
+	id		= "com.offexploring.phonegaptest"
 	version 	= "1.0.0">
 
-	<name>Instant Apps First Test</name>
+	<name>PhoneGapTest</name>
 
 	<description>
-		This is the first ever InstantApps app
+		This is my first ever PhoneGap app
 	</description>
 
-	<author href="http://www.instantapps.co.uk"
+	<author href="http://www.andrewace.com"
 		email="web@andrewace.com">
 		Andrew Ace
 	</author>
