@@ -15,74 +15,31 @@
   </head>
 
   <body>
-    <div data-role="page" data-dom-cache="true">
+    <div id="employeeListPage" data-role="page" data-dom-cache="true">
 
       <div data-role="header" data-theme="b" data-position="inline">
         <h1>FOO</h1>
       </div>
 
       <div data-role="content" data-iscroll>
-        <ol data-role="listview">
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-          <li>foo</li>
-        </ol>
+         <ul id="employeeList" data-role="listview" data-filter="true"></ul>
       </div>
 
       <div data-role="footer" class="ui-bar" data-position="inline" id="my-persistent-footer">
         <div data-role="navbar" class="ui-navbar">
           <ul class="ui-grid-b">
-            <li><a href="index.html" data-icon="star" data-prefetch data-transition="slide">Foo</a></li>
-            <li><a href="bar.html" data-icon="star" data-prefetch data-transition="slide">Bar</a></li>
-            <li><a href="baz.html" data-icon="star" data-prefetch data-transition="slide">Baz</a></li>
-            <li><a href="bar.html" data-icon="star" data-prefetch data-transition="slide">Bar</a></li>
-            <li><a href="baz.html" data-icon="star" data-prefetch data-transition="slide">Baz</a></li>
+            <li><a href="index.html" data-icon="star" data-prefetch data-transition="none">Foo</a></li>
+            <li><a href="bar.html" data-icon="star" data-prefetch data-transition="none">Bar</a></li>
+            <li><a href="baz.html" data-icon="star" data-prefetch data-transition="none">Baz</a></li>
+            <li><a href="bar.html" data-icon="star" data-prefetch data-transition="none">Bar</a></li>
+            <li><a href="baz.html" data-icon="star" data-prefetch data-transition="none">Baz</a></li>
           </ul>
         </div>
       </div>
 
     </div>
-
+	<script src="js/employeelist.js"></script>
+	<script src="js/employeedetails.js"></script>
+	<script src="js/reportlist.js"></script>
   </body>
 </html>
