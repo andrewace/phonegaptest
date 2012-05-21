@@ -9,6 +9,19 @@ run(function () {
         } else {
             alert("We can reach Google - get ready for some awesome maps!");
         }
+	    window.uicontrols.createTabBar();
+	    window.uicontrols.createTabBarItem(
+	        "btn1",
+	        "My button",
+	        "icon.png",
+	        { onSelect: function() { callback('my') } })
+	    window.uicontrols.createTabBarItem(
+	        "btn2",
+	        "My Favourite",
+	        "tabButton:Favorites"
+	    );
+	    window.uicontrols.showTabBar();
+	    window.uicontrols.showTabBarItems("btn1", "btn2");
     })();
     
     // a little inline controller
@@ -55,20 +68,5 @@ run(function () {
     });
 });
 
-// this is the default function lauched when the device is ready
-function onDeviceReady() {
-    window.uicontrols.createTabBar();
-    window.uicontrols.createTabBarItem(
-        "btn1",
-        "My button",
-        "icon.png",
-        { onSelect: function() { callback('my') } })
-    window.uicontrols.createTabBarItem(
-        "btn2",
-        "My Favourite",
-        "tabButton:Favorites"
-    );
-    window.uicontrols.showTabBar();
-    window.uicontrols.showTabBarItems("btn1", "btn2");
-}
+
 
