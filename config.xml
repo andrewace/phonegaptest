@@ -21,6 +21,9 @@
 	<icon src="icons/icon-72.png" gap:platform="ios" width="72" height="72" />
 	<icon src="icons/icon_at_2x.png" width="114" height="114" />
 
+	<gap:splash src="icons/splash320.png" width="320" height="480" />
+	<gap:splash src="icons/splash640.png" width="640" height="960" />
+
 	<feature name="http://api.phonegap.com/1.0/geolocation"/>
 	<feature name="http://api.phonegap.com/1.0/network"/>
 
