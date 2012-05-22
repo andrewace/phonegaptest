@@ -15,59 +15,14 @@
   </head>
 
   <body>
-    <div data-role="page" data-dom-cache="true">
+    <div id="employeeListPage" data-role="page" data-dom-cache="true">
 
       <div data-role="header" data-theme="b" data-position="inline">
-        <h1>School Info</h1>
+        <h1>Classes</h1>
       </div>
 
       <div data-role="content" data-iscroll>
-        <ol data-role="listview">
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-          <li>bar</li>
-        </ol>
+         <ul id="employeeList" data-role="listview" data-filter="true"></ul>
       </div>
 
       <div data-role="footer" class="ui-bar" data-position="inline" id="my-persistent-footer">
@@ -82,6 +37,8 @@
       </div>
 
     </div>
-
+	<script src="js/employeelist.js"></script>
+	<script src="js/employeedetails.js"></script>
+	<script src="js/reportlist.js"></script>
   </body>
 </html>
