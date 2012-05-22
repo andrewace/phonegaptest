@@ -733,7 +733,12 @@ jQuery(document).bind("pagecreate", function (e) {
   // The find() below returns an array of jQuery page objects. The Widget Factory will
   // enumerate these and call the widget _create() fucntion for each member of the array.
   // If the array is of zero length, then no _create() fucntion is called.
-  jQuery(e.target).find(":jqmData(iscroll)").iscrollview();
+  
+  
+  setTimeout('',600)
+  
+  
+ 
   });
 
 
