@@ -19,19 +19,9 @@ function getEmployeeList() {
 		});
 		$('#employeeList').listview('refresh');
 		
-		
-		//$("#employeeListPage div:nth-child(2)").append('<div class="ui-content" id="scrolldiv"></div>');
-		//$("#scrolldiv").append($("#employeeList"))
-		//$('#scrolldiv').iscrollview()
-		
-		//$('#employeeList').iscrollview()
-		
-		
-		$("#employeeListPage div.ui-header").append('<div id="searchform" style="padding:15px;height:15px"></div>')
-		$("#searchform").append($("#employeeListPage div.ui-content form"))
-		
+		$("#employeeListPage div.ui-header").append('<div id="searchform"></div>')
+		$("#searchform").append($("#employeeListPage div.ui-content form"))		
 		$("#employeeListPage div.ui-content").iscrollview()
-		
 
 	});
 } 

@@ -25,8 +25,19 @@ span.ui-btn-text {
 	
 }
 
-.ui-bar-b h1 {
+.ui-bar-b h1.ui-title {
 
-	margin-top: 0.8em;
+	line-height:1.4em !important;
+	margin-top: 0.8em !important;
+}
 
+#searchform {
+	display:none;
+}
+
+
+.data-filter #searchform {
+	display:block;
+	padding:15px;
+	height:15px
 }
