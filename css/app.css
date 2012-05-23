@@ -40,10 +40,13 @@ span.ui-btn-text {
 .ui-bar-b h1.ui-title {
 
 	line-height:1.4em !important;
-	margin-top: 0.8em !important;
 	font-family:"TOONISH",Arial,Helvetica,sans-serif;
 	font-weight:normal;
-	font-size:22px;
+	font-size:20px;
+
+	margin: 0;
+	line-height: 2.1em !important;
+	margin-top: 2px;
 }
 
 #searchform {
