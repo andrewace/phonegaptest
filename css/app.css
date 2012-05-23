@@ -21,8 +21,12 @@ span.ui-btn-text {
 	background-image: linear-gradient(#990000,#660000);
 	text-shadow:0 -1px 1px #000;
 	border:0;
-	border-bottom:0;
+	border-bottom:1px solid black;
 	
+}
+
+.data-filter .ui-bar-b {
+	border-bottom:0;
 }
 
 .ui-bar-b h1.ui-title {
@@ -39,5 +43,6 @@ span.ui-btn-text {
 .data-filter #searchform {
 	display:block;
 	padding:15px;
-	height:15px
+	height:15px;
+	border-top:1px solid black;
 }
