@@ -68,13 +68,13 @@ span.ui-btn-text {
 #emailbutton span { font-size: 15px ; }
 #mapbutton span { font-size: 17px ; margin-top:-3px; }
 
-#categoryList h4.ui-li-heading {
+.ui-listview h4.ui-li-heading {
 
 	text-shadow: -1px 1px 0 white;
 	font-size:18px;
 }
 
-#categoryList .ui-btn-active a.ui-link-inherit h4.ui-li-heading {
+.ui-listview .ui-btn-active a.ui-link-inherit h4.ui-li-heading {
 	text-shadow: -1px 1px 0 black;
 }
 
