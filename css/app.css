@@ -53,3 +53,9 @@ span.ui-btn-text {
 #phonebutton span { font-size: 20px ; }
 #emailbutton span { font-size: 15px ; }
 #mapbutton span { font-size: 17px ; margin-top:-3px; }
+
+#categoryList h4.ui-li-heading {
+
+	text-shadow: -1px 2px 0 white !important;
+	font-size:18px;
+}
