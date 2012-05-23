@@ -52,4 +52,4 @@ span.ui-btn-text {
 
 #phonebutton span { font-size: 20px ; }
 #emailbutton span { font-size: 15px ; }
-#mapbutton span { font-size: 17px ; }
+#mapbutton span { font-size: 17px ; margin-top:-3px; }
