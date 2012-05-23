@@ -1,32 +1,30 @@
-var serviceURL = "http://ourapp.biz/phonegap/";
+var siteURL = "http://frontstreetprimary.co.uk/";
+var apiPath = "mobile/api/";
+var imgPath = "wp-content/uploads/";
 
-var employees;
 
-jQuery(document).bind("pageinit", function (e) {
+var categories;
 
-	getEmployeeList();
+
+$("#categoryPage").bind("pageinit", function (e) {
+
+	getCategoryList();
 
 });
 
 
-function getEmployeeList() {
-	$.getJSON(serviceURL + 'getemployees.php', function(data) {
-		$('.ui-listview li').remove();
-		employees = data.items;
-		$.each(employees, function(index, employee) {
-			$('.ui-listview').append('<li><a href="employeedetails.html?id=' + employee.id + '">' +
-					'<img src="pics/' + employee.picture + '"/>' +
-					'<h4>' + employee.firstName + ' ' + employee.lastName + '</h4>' +
-					'<p>' + employee.title + '</p>' +
-					'<span class="ui-li-count">' + employee.reportCount + '</span></a></li>');
+function getCategoryList() {
+
+	$.getJSON(siteURL + apiPath + 'getcategories.php?', function(data) {
+		$('#categoryList li').remove();
+		categories = data.items;
+		$.each(categories, function(index, category) {
+			$('#categoryList').append('<li><a href="categorydetails.html?id=' + category.slug + '">' +
+					'<img src="' + siteURL + imgPath + category.slug + '.jpg"/>' +
+					'<h4>' + category.name + '</h4></a></li>');
 		});
 
-		$('.ui-listview').listview('refresh');
-		
-		// THE BELOW IS FOR INCLUDING A DATA-FILTER SECTION WHEN WE WANT TO
-		//$(".ui-page div.ui-header").append('<div id="searchform"></div>')
-		//$("#searchform").append($(".ui-page div.ui-content form"))		
-		
+		$('#categoryList').listview('refresh');
 		$(".ui-page div.ui-content").iscrollview()
 
 	});
