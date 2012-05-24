@@ -87,7 +87,7 @@ function getNewsletters() {
 				
 		$.each(newsletters, function(index, post) {
 		
-			var d = new Date(post.post_date);
+			var d = new Date(""+post.post_date);
 			var mnth = d.getMonth() + 1;
 			var month=new Array();
 			month[0]="January";
@@ -102,11 +102,11 @@ function getNewsletters() {
 			month[9]="October";
 			month[10]="November";
 			month[11]="December";
-			var dt = d.getDate();
-			var append = "th"
-			if (dt==1||dt==21||dt==31) { append = "st" ; }
-			if (dt==2||dt==22) { append = "nd" ; }
-			if (dt==3||dt==23) { append = "rd" ; }
+			var dt = ""+d.getDate();
+			var append = "th";
+			if (dt=="1"||dt=="21"||dt=="31") { append = "st" ; }
+			if (dt=="2"||dt=="22") { append = "nd" ; }
+			if (dt=="3"||dt=="23") { append = "rd" ; }
 			thedate = dt + append + " " + month[d.getMonth()] + " " + d.getFullYear();
 		
 			$('#newsletterList').append('<li><a href="newsletter.html?id=' + post.ID + '">' +
