@@ -87,27 +87,34 @@ function getNewsletters() {
 				
 		$.each(newsletters, function(index, post) {
 		
-			var d = new Date(""+post.post_date);
-			var mnth = d.getMonth() + 1;
+			var strDate=post.post_date;
+			var arrDate=strDate.split(" ");	
+			arrDate=arrDate[0].split("-");
+			
 			var month=new Array();
-			month[0]="January";
-			month[1]="February";
-			month[2]="March";
-			month[3]="April";
-			month[4]="May";
-			month[5]="June";
-			month[6]="July";
-			month[7]="August";
-			month[8]="September";
-			month[9]="October";
-			month[10]="November";
-			month[11]="December";
-			var dt = ""+d.getDate();
+			month[1]="January";
+			month[2]="February";
+			month[3]="March";
+			month[4]="April";
+			month[5]="May";
+			month[6]="June";
+			month[7]="July";
+			month[8]="August";
+			month[9]="September";
+			month[10]="October";
+			month[11]="November";
+			month[12]="December";
+			
+			var yr = arrDate[0];
+			var mt = month[parseInt(arrDate[1])];
+			var dt = parseInt(arrDate[2]);
+
 			var append = "th";
 			if (dt=="1"||dt=="21"||dt=="31") { append = "st" ; }
 			if (dt=="2"||dt=="22") { append = "nd" ; }
 			if (dt=="3"||dt=="23") { append = "rd" ; }
-			thedate = dt + append + " " + month[d.getMonth()] + " " + d.getFullYear();
+
+			thedate = dt + append + " " + mt + " " + yr ;
 		
 			$('#newsletterList').append('<li><a href="newsletter.html?id=' + post.ID + '">' +
 					'<h4>' + thedate + '</h4></a></li>');
