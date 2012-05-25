@@ -6,17 +6,6 @@ var categories;
 var infoPages;
 var newsletters;
 
-<<<<<<< HEAD
-=======
-
-// Date Format Method
-// copyright Stephen Chapman, 20th November 2007, 19 January 2011
-// http://javascript.about.com
-// permission to use this JavaScript on your web page is granted
-// provided that all of the code below in this script (including these
-// comments) is used without any alteration
->>>>>>> 1e21f1d8c858bc59255c684a99e0fb361d3f17fe
-
 function getCategoryList() {
 
 	$.getJSON(siteURL + apiPath + 'getcategories.php?', function(data) {
@@ -82,11 +71,6 @@ function getNewsletters() {
 
 	$.getJSON(siteURL + apiPath + 'getnewsletters.php?', function(data) {
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 1e21f1d8c858bc59255c684a99e0fb361d3f17fe
 		$('#newsletterList li').remove();
 		newsletters = data.items;
 				
@@ -128,11 +112,8 @@ function getNewsletters() {
 		$('#newsletterList').listview('refresh');
 		$(".ui-page div.ui-content").iscrollview();
 		
-<<<<<<< HEAD
 		$('#newsletterList li:first-child div div a h4').append('<span class="latestnews">LATEST</span>');
 		
-=======
->>>>>>> 1e21f1d8c858bc59255c684a99e0fb361d3f17fe
 		var numelements=$("#newsletterList .ui-link-inherit").length;
 		var boxheight=$("div.ui-content").height();	
 		
