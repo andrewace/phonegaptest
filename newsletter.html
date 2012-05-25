@@ -35,10 +35,12 @@
           </ul>
         </div>
       </div>
-
+	  <script type="text/javascript">
+			$("#newsletterPage").live('pageinit', function() {
+				getNewsletters();
+			});
+	  </script>
     </div>
 	<script src="js/employeelist.js"></script>
-	<script src="js/employeedetails.js"></script>
-	<script src="js/reportlist.js"></script>
   </body>
 </html>
