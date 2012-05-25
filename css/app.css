@@ -46,7 +46,7 @@ span.ui-btn-text {
 
 	margin: 0;
 	line-height: 2.1em !important;
-	margin-top: 2px;
+	margin-top: 4px;
 }
 
 #searchform {
@@ -68,14 +68,29 @@ span.ui-btn-text {
 #emailbutton span { font-size: 15px ; }
 #mapbutton span { font-size: 17px ; margin-top:-3px; }
 
-#categoryList h4.ui-li-heading {
+.ui-listview h4.ui-li-heading {
 
 	text-shadow: -1px 1px 0 white;
 	font-size:18px;
 }
 
-#categoryList .ui-btn-active a.ui-link-inherit h4.ui-li-heading {
+.ui-listview .ui-btn-active a.ui-link-inherit h4.ui-li-heading {
 	text-shadow: -1px 1px 0 black;
 }
 
 
+span.latestnews {
+
+	font-size: 10px;
+	color:white;
+	display: inline-block;
+	background-color: #CA0;
+	margin-left: 20px;
+	padding: 3px;
+	border-radius: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	top: -4px;
+	position: relative;
+	text-shadow: 0 1px 1px #555;
+}
