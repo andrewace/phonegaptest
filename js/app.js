@@ -177,14 +177,13 @@ function getPostList(data) {
 	$.each(posts, function(index, post) {
 		$('.ui-page-active #postList').append('<li><a href="postdetails.html?id=' + post.link + '">' +
 
-				post.image +
-				'<h4>' + post.title + '</h4>' +
-				'<p>' + post.date + '</p>' +
-				'</a></li>');
+		post.image +
+		'<h4>' + post.title + '</h4>' +
+		'<p>' + post.date + '</p>' +
+		'</a></li>');
 	});
 
 	$('.ui-page-active #postList').listview('refresh');
 	$(".ui-page div.ui-content").iscrollview();
-	//alert("Post Page Connection: "+connectionType);
 
 } 
