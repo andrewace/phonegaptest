@@ -8,6 +8,8 @@ var infoPages;
 var newsletters;
 var posts;
 
+var connectionType = "notReady";
+
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
@@ -16,17 +18,9 @@ function onDeviceReady() {
 
 function checkConnection() {
 	var networkState = navigator.network.connection.type;
-
-	var states = {};
-	states[Connection.UNKNOWN]  = 'Unknown connection';
-	states[Connection.ETHERNET] = 'Ethernet connection';
-	states[Connection.WIFI]     = 'WiFi connection';
-	states[Connection.CELL_2G]  = 'Cell 2G connection';
-	states[Connection.CELL_3G]  = 'Cell 3G connection';
-	states[Connection.CELL_4G]  = 'Cell 4G connection';
-	states[Connection.NONE]     = 'No network connection';
-
-	alert('Connection type: ' + states[networkState]);
+	if (networkState==Connection.ETHERNET || networkState==Connection.WIFI || networkState==Connection.CELL_4G) { connectionType="fast" }
+	if (networkState==Connection.CELL_2G || networkState==Connection.CELL_3G) { connectionType="slow" }
+	if (networkState==Connection.UNKNOWN || networkState==Connection.NONE) { connectionType="none" }
 }
 
 
@@ -56,6 +50,9 @@ function getCategoryList() {
 	$.getJSON(siteURL + apiPath + 'getcategories.php?', function(data) {
 		$('#categoryList li').remove();
 		categories = data.items;
+		
+		alert("Connection: "+connectionType);
+		
 		$.each(categories, function(index, category) {
 			$('#categoryList').append('<li><a href="posts.html?id=' + category.slug + '&title=' + category.name + '">' +
 					'<h4>' + category.name + '</h4></a></li>');
@@ -188,5 +185,6 @@ function getPostList(data) {
 
 	$('#postList').listview('refresh');
 	$(".ui-page div.ui-content").iscrollview();
+	alert("Connection: "+connectionType);
 
 } 
