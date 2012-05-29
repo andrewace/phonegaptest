@@ -8,6 +8,28 @@ var infoPages;
 var newsletters;
 var posts;
 
+document.addEventListener("deviceready", onDeviceReady, false);
+
+function onDeviceReady() {
+	checkConnection();
+}
+
+function checkConnection() {
+	var networkState = navigator.network.connection.type;
+
+	var states = {};
+	states[Connection.UNKNOWN]  = 'Unknown connection';
+	states[Connection.ETHERNET] = 'Ethernet connection';
+	states[Connection.WIFI]     = 'WiFi connection';
+	states[Connection.CELL_2G]  = 'Cell 2G connection';
+	states[Connection.CELL_3G]  = 'Cell 3G connection';
+	states[Connection.CELL_4G]  = 'Cell 4G connection';
+	states[Connection.NONE]     = 'No network connection';
+
+	alert('Connection type: ' + states[networkState]);
+}
+
+
 function getUrlVars() {
     var vars = [], hash;
     var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
@@ -86,13 +108,6 @@ function getInfoList() {
 		$("#schoolInfoList a.ui-link-inherit").css("padding-bottom",elempadding+"px");
 		$("#schoolInfoList div.ui-btn-inner").css("height",elemheight+"px");		
 		
-		navigator.notification.confirm(
-		  'Please try again', // BODY COPY
-		  alertConfirm, // CALL BACK FUNCTION
-		  'Oops something went wrong!', // TITLE
-		  'LAME, TRY AGAIN' // BUTTON TEXT
-		);
-
 	});
 } 
 
