@@ -36,6 +36,9 @@
 				var id = urlvars["id"];
 				pagetitle=decodeURI(urlvars["title"])
 				pagetitle=pagetitle.replace("%26","&");
+
+				alert(pagetitle);
+
 				document.getElementById("categoryname").innerHTML=pagetitle;
 				$.getJSON(siteURL + postPath + id + '/?api=1&category=' + id, getPostList);
 			});
