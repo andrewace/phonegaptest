@@ -11,7 +11,7 @@ div.ui-navbar {
 	margin-left:-10px;
 }
 
-.ui-bar-b hi{
+.ui-header hi{
     background-color: #990000;
 }
 
@@ -19,7 +19,7 @@ span.ui-btn-text {
 	font-size:11px;
 }
 
-.ui-bar-b {
+.ui-header {
 
 	background-image: -webkit-gradient(linear,left top,left bottom,from(#990000),to(#660000));
 	background-image: -webkit-linear-gradient(#990000,#660000);
@@ -33,11 +33,11 @@ span.ui-btn-text {
 	
 }
 
-.data-filter .ui-bar-b {
+.data-filter .ui-header {
 	border-bottom:0;
 }
 
-.ui-bar-b h1.ui-title {
+.ui-header h1.ui-title {
 
 	line-height:1.4em !important;
 	font-family:"TOONISH",Arial,Helvetica,sans-serif;
@@ -78,6 +78,7 @@ span.ui-btn-text {
 	text-shadow: -1px 1px 0 black;
 }
 
+
 span.latestnews {
 
 	font-size: 10px;
@@ -93,3 +94,8 @@ span.latestnews {
 	position: relative;
 	text-shadow: 0 1px 1px #555;
 }
+
+.ui-header .ui-btn-left {
+
+	margin-top:2px;
+} 
