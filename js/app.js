@@ -1,10 +1,24 @@
-var siteURL = "http://frontstreetprimary.co.uk/";
-var apiPath = "mobile/api/";
-var imgPath = "wp-content/uploads/";
+var siteURL = "http://www.frontstreetprimary.co.uk";
+var apiPath = "/mobile/api/";
+var postPath = "/news/age/";
+var imgPath = "/wp-content/uploads/";
 
 var categories;
 var infoPages;
 var newsletters;
+var posts;
+
+function getUrlVars() {
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++)
+    {
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+    }
+    return vars;
+}
 
 function getCategoryList() {
 
@@ -12,7 +26,7 @@ function getCategoryList() {
 		$('#categoryList li').remove();
 		categories = data.items;
 		$.each(categories, function(index, category) {
-			$('#categoryList').append('<li><a href="categorydetails.html?id=' + category.slug + '">' +
+			$('#categoryList').append('<li><a href="posts.html?id=' + category.slug + '&title=' + category.name + '">' +
 					'<h4>' + category.name + '</h4></a></li>');
 		});
 
@@ -33,7 +47,7 @@ function getCategoryList() {
 
 	});
 } 
-
+ 
 function getInfoList() {
 
 
@@ -127,4 +141,22 @@ function getNewsletters() {
 		
 
 	});
+} 
+
+function getPostList(data) {
+
+	posts = data.items;
+	$('#postList li').remove();
+	$.each(posts, function(index, post) {
+		$('#postList').append('<li><a href="postdetails.html?id=' + post.link + '">' +
+
+				post.image +
+				'<h4>' + post.title + '</h4>' +
+				'<p>' + post.date + '</p>' +
+				'</a></li>');
+	});
+
+	$('#postList').listview('refresh');
+	$(".ui-page div.ui-content").iscrollview();
+
 } 
