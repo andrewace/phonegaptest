@@ -33,7 +33,9 @@
 			$('#postListPage').live('pageshow', function(event) {
 				var urlvars = getUrlVars()
 				var id = urlvars["id"];
-				document.getElementById("categoryname").innerHTML=decodeURI(urlvars["title"]);
+				pagetitle=decodeURI(urlvars["title"])
+				pagetitle=pagetitle.replace("%26","&");
+				document.getElementById("categoryname").innerHTML=pagetitle;
 				$.getJSON(siteURL + postPath + id + '/?api=1&category=' + id, getPostList);
 			});
 
