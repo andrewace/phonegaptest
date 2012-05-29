@@ -51,7 +51,7 @@ function getCategoryList() {
 		$('#categoryList li').remove();
 		categories = data.items;
 		
-		alert("Connection: "+connectionType);
+		alert("Cat List Connection: "+connectionType);
 		
 		$.each(categories, function(index, category) {
 			$('#categoryList').append('<li><a href="posts.html?id=' + category.slug + '&title=' + category.name + '">' +
@@ -185,6 +185,6 @@ function getPostList(data) {
 
 	$('#postList').listview('refresh');
 	$(".ui-page div.ui-content").iscrollview();
-	alert("Connection: "+connectionType);
+	alert("Post Page Connection: "+connectionType);
 
 } 
