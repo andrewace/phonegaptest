@@ -99,3 +99,11 @@ span.latestnews {
 
 	margin-top:2px;
 } 
+
+
+#postListPage div.ui-btn-text a.ui-link-inherit {
+	
+	background-image:url(../icons/loading.png);
+	background-repeat:no-repeat;
+
+}
