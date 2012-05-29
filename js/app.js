@@ -8,6 +8,36 @@ var infoPages;
 var newsletters;
 var posts;
 
+var networkState = navigator.network.connection.type;
+var states = {};
+states[Connection.UNKNOWN] = 'Unknown connection';
+states[Connection.ETHERNET] = 'Ethernet connection';
+states[Connection.WIFI] = 'WiFi connection';
+states[Connection.CELL_2G] = 'Cell 2G connection';
+states[Connection.CELL_3G] = 'Cell 3G connection';
+states[Connection.CELL_4G] = 'Cell 4G connection';
+states[Connection.NONE] = 'No network connection';
+if((states[networkState] == 'No network connection') || (states[networkState] == 'Unknown connection')){
+alert("Your phone's web connection is not working. Please check and relaunch app.");
+}
+else{
+var url = "http://maps.google.com";
+$.ajax({
+type: "GET",
+data: "{}",
+url: url,
+cache: false,
+timeout: 10 * 1000,
+success:function(response)
+{
+//do something great!
+},
+error:function(xhr, textStatus, errorThrown) {
+alert("Your web connection is running slow. Please retry.");
+}
+});
+}
+
 function getUrlVars() {
     var vars = [], hash;
     var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
