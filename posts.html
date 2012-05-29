@@ -37,10 +37,11 @@
 				pagetitle=decodeURI(urlvars["title"])
 				pagetitle=pagetitle.replace("%26","&");
 
-				alert(pagetitle);
+				if ($('.ui-page-active #categoryname').html()!=pagetitle) {
 
-				document.getElementById("categoryname").innerHTML=pagetitle;
-				$.getJSON(siteURL + postPath + id + '/?api=1&category=' + id, getPostList);
+					$('.ui-page-active #categoryname').html(pagetitle);
+					$.getJSON(siteURL + postPath + id + '/?api=1&category=' + id, getPostList);
+				}
 			});
 
 	  </script>

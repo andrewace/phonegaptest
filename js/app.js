@@ -51,7 +51,7 @@ function getCategoryList() {
 		$('#categoryList li').remove();
 		categories = data.items;
 		
-		alert("Cat List Connection: "+connectionType);
+		//alert("Cat List Connection: "+connectionType);
 		
 		$.each(categories, function(index, category) {
 			$('#categoryList').append('<li><a href="posts.html?id=' + category.slug + '&title=' + category.name + '">' +
@@ -173,9 +173,9 @@ function getNewsletters() {
 function getPostList(data) {
 
 	posts = data.items;
-	$('#postList li').remove();
+	$('.ui-page-active #postList li').remove();
 	$.each(posts, function(index, post) {
-		$('#postList').append('<li><a href="postdetails.html?id=' + post.link + '">' +
+		$('.ui-page-active #postList').append('<li><a href="postdetails.html?id=' + post.link + '">' +
 
 				post.image +
 				'<h4>' + post.title + '</h4>' +
@@ -183,8 +183,8 @@ function getPostList(data) {
 				'</a></li>');
 	});
 
-	$('#postList').listview('refresh');
+	$('.ui-page-active #postList').listview('refresh');
 	$(".ui-page div.ui-content").iscrollview();
-	alert("Post Page Connection: "+connectionType);
+	//alert("Post Page Connection: "+connectionType);
 
 } 
