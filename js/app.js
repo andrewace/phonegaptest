@@ -20,6 +20,15 @@ function getUrlVars() {
     return vars;
 }
 
+function alertConfirm(b){
+  if(b == 1){
+   alert('BUTTON 1 WAS CLICKED');
+  }
+  else {
+   alert('BUTTON 2 WAS CLICKED');
+  }
+}
+
 function getCategoryList() {
 
 	$.getJSON(siteURL + apiPath + 'getcategories.php?', function(data) {
