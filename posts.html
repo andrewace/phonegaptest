@@ -23,7 +23,8 @@
       </div>
 
       <div data-role="content" data-iscroll>
-         <ul id="postList" data-role="listview" style="background-image:url(icons/loading-bg.jpg)">
+         <ul id="postList" data-role="listview">
+         <li style="background-image:url(icons/loadingbg.jpg);height:413px;"></li>
          </ul>
       </div>
 
@@ -37,7 +38,7 @@
 				pagetitle=pagetitle.replace("%26","&");
 
 				$('.ui-page-active #categoryname').html(pagetitle);
-				$.getJSON(siteURL + postPath + id + '/?api=1&category=' + id, getPostList);
+				//$.getJSON(siteURL + postPath + id + '/?api=1&category=' + id, getPostList);
 			});
 
 			$('#postListPage').live('pagehide', function(event) {
