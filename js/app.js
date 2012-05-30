@@ -197,6 +197,7 @@ function getSinglePost(data) {
 		$('#author').text(thepost.author);
 		$('#postContent').html(thepost.content);
 		$('#avatar').html(thepost.avatar);
+		$('#postImage').html(thepost.image); 
 	});
 
 	$(".ui-page div.ui-content").iscrollview();

@@ -213,5 +213,38 @@ div.ui-content {
 #postContent {
 
 	margin: 15px;
-	font-size: 15px;
+	font-size: 15px;	
+	font-family: Georgia, Helvetica, sans-serif;
+	line-height: 21px;
+	padding-bottom: 15px;  
+}
+
+#postImage {
+
+	margin:0;
+	padding:0;
+}
+
+#postImage img {
+
+	-moz-box-shadow: 0 1px 4px rgba(0,0,0,.3);
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+	box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	-webkit-padding-start: 40px;
+	-moz-border-radius: .6em;
+	-webkit-border-radius: .6em;
+	border-radius: .6em;
+	margin: 1em 0;
+	padding: 0;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;	
+	
+	border-color: rgba(255, 255, 255, .3);
+	border-top: 1px solid white;
+	border-width: 1px;	
 }
