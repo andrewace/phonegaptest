@@ -113,3 +113,98 @@ div.ui-content {
 	background-image:url(../icons/paper.jpg);
 	background-repeat:no-repeat;
 }
+
+
+
+#postTitle {
+
+color: #BB242D;
+font-family: "TOONISH",Arial,Helvetica,sans-serif;
+font-weight: normal;
+font-size: 28px;
+margin:0;
+margin-top: 10px;
+padding: 0;
+
+}
+
+#postDate { 
+
+	font-family: Georgia, Helvetica, sans-serif;
+	margin: 0;
+	margin-top: 10px;
+	font-size: 16px;
+	margin-left: 20px;
+	margin-bottom: 5px;
+	color: #333;
+
+}
+
+#avatar {
+
+	width: 30px;
+	height: 30px;
+	margin-left: 20px;
+	float: left;
+	margin-right: 10px;
+	margin-top: 14px;
+}
+
+
+#author {
+	margin-left: 10px;
+	font-size: 12px;
+	padding-bottom: 10px;
+	display: block;
+}
+
+.postDetails {
+
+	-moz-box-shadow: 0 1px 4px rgba(0,0,0,.3);
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+	box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	-webkit-padding-start: 40px;
+	-moz-border-radius: .6em;
+	-webkit-border-radius: .6em;
+	border-radius: .6em;
+	margin: 1em 0;
+	background-color:#f7f7f7;
+	padding: 0;
+	-webkit-background-clip: padding-box;
+	-moz-background-clip: padding;
+	background-clip: padding-box;	
+	
+	border-color: rgba(255, 255, 255, .3);
+	border-top: 1px solid white;
+	border-width: 0;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-bottom-width: 1px;	
+
+	background-image: linear-gradient(bottom, rgb(235,235,235) 38%, rgb(255,255,255) 100%, rgb(33,33,33) 100%);
+	background-image: -o-linear-gradient(bottom, rgb(235,235,235) 38%, rgb(255,255,255) 100%, rgb(33,33,33) 100%);
+	background-image: -moz-linear-gradient(bottom, rgb(235,235,235) 38%, rgb(255,255,255) 100%, rgb(33,33,33) 100%);
+	background-image: -webkit-linear-gradient(bottom, rgb(235,235,235) 38%, rgb(255,255,255) 100%, rgb(33,33,33) 100%);
+	background-image: -ms-linear-gradient(bottom, rgb(235,235,235) 38%, rgb(255,255,255) 100%, rgb(33,33,33) 100%);
+
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.38, rgb(235,235,235)),
+		color-stop(1, rgb(255,255,255)),
+		color-stop(1, rgb(33,33,33))
+	);
+}
+
+#postContent {
+
+	margin: 20px;
+	padding-bottom: 20px;
+	font-size: 14px;
+}
