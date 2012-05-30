@@ -200,7 +200,7 @@ function getSinglePost(data) {
 		$('#postImage').html(thepost.image); 
 	});
 
+	$('.ui-page-active #postItem').listview('refresh');
 	$(".ui-page div.ui-content").iscrollview();
-
 } 
 

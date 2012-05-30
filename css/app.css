@@ -245,6 +245,7 @@ div.ui-content {
 	background-clip: padding-box;	
 	
 	border-color: rgba(255, 255, 255, .3);
-	border-top: 1px solid white;
 	border-width: 1px;	
+	
+	width:290px;
 }
