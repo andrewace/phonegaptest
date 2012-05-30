@@ -175,8 +175,7 @@ function getPostList(data) {
 	posts = data.items;
 	$('.ui-page-active #postList li').remove();
 	$.each(posts, function(index, post) {
-		$('.ui-page-active #postList').append('<li><a href="postdetails.html?id=' + post.link + '">' +
-
+		$('.ui-page-active #postList').append('<li><a href="viewpost.html?link=' + post.link + '&category=' + getUrlVars()['title'] + '">' +
 		post.image +
 		'<h4>' + post.title + '</h4>' +
 		'<p>' + post.date + '</p>' +
@@ -187,3 +186,20 @@ function getPostList(data) {
 	$(".ui-page div.ui-content").iscrollview();
 
 } 
+
+function getSinglePost(data) {
+
+	posts = data.items;
+
+	$.each(posts, function(index, thepost) {
+		$('#postTitle').text(thepost.title);
+		$('#postDate').text(thepost.date);
+		$('#author').text(thepost.author);
+		$('#postContent').html(thepost.content);
+		$('#avatar').html(thepost.avatar);
+	});
+
+	$(".ui-page div.ui-content").iscrollview();
+
+} 
+
