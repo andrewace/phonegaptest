@@ -71,7 +71,7 @@ span.ui-btn-text {
 .ui-listview h4.ui-li-heading {
 
 	text-shadow: -1px 1px 0 white;
-	font-size:18px;
+	font-size: 17px;
 }
 
 .ui-listview .ui-btn-active a.ui-link-inherit h4.ui-li-heading {
@@ -250,4 +250,16 @@ div.ui-content {
 
 	padding-bottom:40px;
 
+}
+
+.ui-btn-corner-all {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.ui-header .ui-btn {
+	
+	font-size:14px;
+	height: 30px;
 }
