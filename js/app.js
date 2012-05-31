@@ -1,6 +1,7 @@
 var siteURL = "http://www.frontstreetprimary.co.uk";
 var apiPath = "/mobile/api/";
 var postPath = "/news/age/";
+var pagePath = "/school-information/";
 var imgPath = "/wp-content/uploads/";
 
 var categories;
@@ -84,7 +85,7 @@ function getInfoList() {
 		infoPages = data.items;
 				
 		$.each(infoPages, function(index, page) {
-			$('#schoolInfoList').append('<li><a href="schoolInfodetails.html?id=' + page.ID + '">' +
+			$('#schoolInfoList').append('<li><a href="viewpage.html?id=' + page.post_name + '">' +
 					'<h4>' + page.post_title + '</h4></a></li>');
 		});
 
@@ -202,7 +203,33 @@ function getSinglePost(data) {
 		$('.ui-page-active #gallery').html(thepost.gallery); 
 	});
 	
-	photoSwipeInstance = $("div.imggallery a", theTarget).photoSwipe(options,  currentPage.attr('pagename'));
+	if ($('.ui-page-active #gallery').html()!="") { 
+		photoSwipeInstance = $("div.imggallery a", theTarget).photoSwipe(options,  currentPage.attr('pagename'));
+	}
+	
+	$(".ui-page-active #loadingmsg").remove();
+	$(".ui-page-active #singleContent").attr('style', 'display:block');
+
+	$(".ui-page div.ui-content").iscrollview();
+
+} 
+
+
+function getSinglePage(data) {
+
+	pages = data.items;
+	
+	$.each(pages, function(index, thepage) {
+	
+		$('.ui-page-active #postTitle').text(thepage.title);
+		$('.ui-page-active #postContent').html(thepage.content);
+		$('.ui-page-active #postImage').html(thepage.image); 
+		$('.ui-page-active #gallery').html(thepage.gallery); 
+	});
+	
+	if ($('.ui-page-active #gallery').html()!="") { 
+		photoSwipeInstance = $("div.imggallery a", theTarget).photoSwipe(options,  currentPage.attr('pagename'));
+	}
 	
 	$(".ui-page-active #loadingmsg").remove();
 	$(".ui-page-active #singleContent").attr('style', 'display:block');

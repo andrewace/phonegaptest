@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title>Front Street Primary School - Posts</title>
+    <title>Front Street Primary School - Pages</title>
     <link type="text/css" rel="stylesheet" href="css/jquery.mobile-1.0.1.min.css" />
     <link type="text/css" rel="stylesheet" href="css/app.css" />
    	<link type="text/css" rel="stylesheet" href="css/photoswipe.css" />
@@ -20,10 +20,10 @@
   </head>
 
   <body>
-    <div id="postViewPage" data-role="page" pagename="unset" data-add-back-btn="true" data-dom-cache="true">
+    <div id="infoViewPage" data-role="page" pagename="unset" data-add-back-btn="true" data-dom-cache="true">
 
       <div data-role="header" data-theme="a" data-position="fixed">
-        <h1 id="categoryname">&nbsp;</h1>
+        <h1 id="categoryname">SCHOOL INFO</h1>
       </div>
 
       <div data-role="content" data-iscroll>
@@ -34,14 +34,6 @@
 
 			   <h2 id="postTitle"></h2>
 
-				<div class="postDetails">
-
-					<div id="avatar"></div>
-					<h3 id="postDate"></h3>
-					<div id="author"></div>
-
-				</div>
-
 				<div id="postImage"></div>
 
 				<div class="postDetails">
@@ -49,9 +41,7 @@
 				</div>
 
 				<div>
-					<div class="imggallery" id="gallery">
-						<a href='http://www.frontstreetprimary.co.uk/wp-content/uploads/P5130377.jpg' rel='external'><img src='http://www.frontstreetprimary.co.uk/wp-content/uploads/P5130377-150x150.jpg' alt='P5130377' /></a>
-					</div>
+					<div class="imggallery" id="gallery"></div>
 					<div class="clear"></div>
 				</div>
 
@@ -67,26 +57,23 @@
 			var photoSwipeInstance;
 
 
-			$('#postViewPage').live('pageshow', function(event) {
+			$('#infoViewPage').live('pageshow', function(event) {
 				var urlvars = getUrlVars()
-				pagetitle=decodeURI(urlvars["category"])
-				pagetitle=pagetitle.replace("%26","&");
-				$('.ui-page-active #categoryname').html(pagetitle);
 
 				currentPage = $(event.target);
 				theTarget = event.target;
 
-				$.getJSON(siteURL + urlvars["link"] + '?api=1', getSinglePost);
+				$.getJSON(siteURL + pagePath + urlvars["id"] + '?api=1', getSinglePage);
 
-				currentPage.attr('pagename', urlvars["link"]+urlvars["category"]);
+				currentPage.attr('pagename', urlvars["id"]);
 
 			});
 
-			$('#postViewPage').live('pagehide', function(event, ui) {
+			$('#infoViewPage').live('pagehide', function(event, ui) {
 
-					$('#postViewPage').die();
+					$('#infoViewPage').die();
 					if (typeof photoSwipeInstance != "undefined" && photoSwipeInstance != null) {
-						$('#postViewPage').die(photoSwipeInstance);
+						$('#infoViewPage').die(photoSwipeInstance);
 					}
 			});
 
