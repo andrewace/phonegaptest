@@ -20,7 +20,7 @@
   </head>
 
   <body>
-    <div id="postViewPage" data-role="page" data-add-back-btn="true" data-dom-cache="true">
+    <div id="postViewPage" data-role="page" pagename="unset" data-add-back-btn="true" data-dom-cache="true">
 
       <div data-role="header" data-theme="a" data-position="fixed">
         <h1 id="categoryname">&nbsp;</h1>
@@ -48,8 +48,10 @@
 					<p id="postContent"></p>
 				</div>
 
-				<div class="imggallery" id="gallery">
-					<a href='http://www.frontstreetprimary.co.uk/wp-content/uploads/P5130377.jpg' rel='external'><img src='http://www.frontstreetprimary.co.uk/wp-content/uploads/P5130377-150x150.jpg' alt='P5130377' /></a>
+				<div>
+					<div class="imggallery" id="gallery">
+						<a href='http://www.frontstreetprimary.co.uk/wp-content/uploads/P5130377.jpg' rel='external'><img src='http://www.frontstreetprimary.co.uk/wp-content/uploads/P5130377-150x150.jpg' alt='P5130377' /></a>
+					</div>
 					<div class="clear"></div>
 				</div>
 
@@ -76,11 +78,16 @@
 
 				$.getJSON(siteURL + urlvars["link"] + '?api=1', getSinglePost);
 
+				currentPage.attr('pagename', urlvars["link"]);
+
 			});
 
 			$('#postViewPage').live('pagehide', function(event, ui) {
 
 					$('#postViewPage').die();
+					if (typeof photoSwipeInstance != "undefined" && photoSwipeInstance != null) {
+						$('#postViewPage').die(photoSwipeInstance);
+					}
 			});
 
 
