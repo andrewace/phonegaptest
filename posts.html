@@ -25,7 +25,7 @@
 
       <div data-role="content" data-iscroll>
          <ul id="postList" data-role="listview">
-         <li style="background-image:url(icons/loadingbg.jpg);height:393px;"></li>
+         <li id="loadingmsg"></li>
          </ul>
       </div>
 
@@ -43,11 +43,7 @@
 
 			$('#postListPage').live('pagehide', function(event, ui) {
 
-				//if (ui.nextPage.attr("id")=="categoryPage") {
-
 					$('#postListPage').die();
-				//	 alert( "killed");
-				//}
 			});
 
 	  </script>

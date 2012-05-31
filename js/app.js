@@ -192,14 +192,22 @@ function getSinglePost(data) {
 	posts = data.items;
 
 	$.each(posts, function(index, thepost) {
-		$('#postTitle').text(thepost.title);
-		$('#postDate').text(thepost.date);
-		$('#author').text(thepost.author);
-		$('#postContent').html(thepost.content);
-		$('#avatar').html(thepost.avatar);
-		$('#postImage').html(thepost.image); 
+	
+		$('.ui-page-active #postTitle').text(thepost.title);
+		$('.ui-page-active #postDate').text(thepost.date);
+		$('.ui-page-active #author').text(thepost.author);
+		$('.ui-page-active #postContent').html(thepost.content);
+		$('.ui-page-active #avatar').html(thepost.avatar);
+		$('.ui-page-active #postImage').html(thepost.image); 
+		$('.ui-page-active #gallery').html(thepost.gallery); 
 	});
+	
+	photoSwipeInstance = $("div.imggallery a", theTarget).photoSwipe(options,  currentPage.attr('id'));
+	
+	$(".ui-page-active #loadingmsg").remove();
+	$(".ui-page-active #singleContent").attr('style', 'display:block');
 
 	$(".ui-page div.ui-content").iscrollview();
+
 } 
 
