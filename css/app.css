@@ -238,7 +238,7 @@ div.ui-content {
 	-moz-border-radius: .6em;
 	-webkit-border-radius: .6em;
 	border-radius: .6em;
-	margin: 1em 0;
+	margin:0;
 	padding: 0;
 	-webkit-background-clip: padding-box;
 	-moz-background-clip: padding;
@@ -248,4 +248,7 @@ div.ui-content {
 	border-width: 1px;	
 	
 	width:290px;
+	height:155px;
+	margin-bottom: 3px;
+	margin-top: 8px;
 }

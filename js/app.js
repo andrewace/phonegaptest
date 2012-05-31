@@ -200,10 +200,6 @@ function getSinglePost(data) {
 		$('#postImage').html(thepost.image); 
 	});
 
-	alert($(".ui-page div.ui-content"));
-
-	alert($(".ui-page div.ui-content").iscrollview())
-
 	$(".ui-page div.ui-content").iscrollview();
 } 
 
