@@ -17,7 +17,7 @@
   </head>
 
   <body>
-    <div id="postListPage" data-role="page" data-add-back-btn="true">
+    <div id="postListPage" data-role="page" data-add-back-btn="true" data-dom-cache="true">
 
       <div data-role="header" data-theme="a" data-position="fixed">
         <h1 id="categoryname">&nbsp;</h1>
@@ -41,9 +41,13 @@
 				$.getJSON(siteURL + postPath + id + '/?api=1&category=' + id, getPostList);
 			});
 
-			$('#postListPage').live('pagehide', function(event) {
+			$('#postListPage').live('pagehide', function(event, ui) {
+
+				//if (ui.nextPage.attr("id")=="categoryPage") {
 
 					$('#postListPage').die();
+				//	 alert( "killed");
+				//}
 			});
 
 	  </script>

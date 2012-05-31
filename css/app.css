@@ -101,17 +101,9 @@ span.latestnews {
 } 
 
 
-#postListPage div.ui-btn-text a.ui-link-inherit {
-	
-	background-image:url(../icons/loading.png);
-	background-repeat:no-repeat;
-
-}
-
 div.ui-content {
 
 	background-image:url(../icons/paper.jpg);
-	background-repeat:no-repeat;
 }
 
 
