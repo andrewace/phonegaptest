@@ -147,7 +147,7 @@ function getNewsletters() {
 
 			thedate = dt + append + " " + mt + " " + yr ;
 		
-			$('#newsletterList').append('<li><a href="newsletter.html?id=' + post.ID + '">' +
+			$('#newsletterList').append('<li><a target="_blank" href="' + post.guid + '&download=1">' +
 					'<h4>' + thedate + '</h4></a></li>');
 		});
 
