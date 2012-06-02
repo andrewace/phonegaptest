@@ -6,11 +6,6 @@
 	font-style: normal;
 }
 
-div.ui-navbar {
-	margin-right:20px;
-	margin-left:-10px;
-}
-
 .ui-header hi{
     background-color: #990000;
 }
@@ -368,4 +363,26 @@ dl.attachments a:hover {
 
 div.attachments img {
 	margin-top: 2px;
+}
+
+.ui-footer .ui-navbar .ui-btn-text {
+
+	top:3px;
+
+}
+
+.ui-footer {
+
+	padding: 0;
+}
+
+.ui-footer .ui-navbar {
+
+	margin: 0;
+}
+
+
+.ui-footer .ui-btn-inner .ui-icon-star {
+
+	display:none; 
 }
