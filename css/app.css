@@ -429,7 +429,7 @@ div.attachments img {
 
 	width: 30px;
 	height: 28px;
-	background-image: url(images/news2.png);
+	background-image: url(images/news.png);
 	margin-left: -16px;
 	background-position:0;
 	opacity: 0.8;
@@ -440,7 +440,7 @@ div.attachments img {
 
 	width: 26px;
 	height: 26px;
-	background-image: url(images/info1.png);
+	background-image: url(images/info.png);
 	margin-left: -13px;
 	background-position:0;
 
@@ -451,7 +451,7 @@ div.attachments img {
 
 	width: 27px;
 	height: 27px;
-	background-image: url(images/phone3.png);
+	background-image: url(images/phone.png);
 	margin-left: -12px;
 	background-position:0;
 
