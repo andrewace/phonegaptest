@@ -49,14 +49,19 @@
       <div data-role="footer" class="ui-bar" data-position="inline" id="my-persistent-footer">
         <div data-role="navbar" class="ui-navbar">
           <ul class="ui-grid-b">
-            <li><a href="index.html" data-icon="star" data-prefetch data-transition="none">Classes</a></li>
-            <li><a href="newsletter.html" data-icon="star" data-prefetch data-transition="none">Newsletter</a></li>
-            <li><a href="schoolinfo.html" data-icon="star" data-prefetch data-transition="none">School Info</a></li>
-            <li><a href="contact.html" data-icon="star" data-prefetch data-transition="none" class="ui-btn-active">Contact</a></li>
+            <li><a id="navbutton1" href="index.html" data-icon="star" data-prefetch data-transition="none">Classes</a></li>
+            <li><a id="navbutton2" href="newsletter.html" data-icon="star" data-prefetch data-transition="none">Newsletter</a></li>
+            <li><a id="navbutton3" href="schoolinfo.html" data-icon="star" data-prefetch data-transition="none">School Info</a></li>
+            <li><a id="navbutton4" href="contact.html" data-icon="star" data-prefetch data-transition="none" class="ui-btn-active">Contact</a></li>
           </ul>
         </div>
       </div>
+	  <script type="text/javascript">
+			$("#schoolContact").live('pageshow', function() {
+				setTimeout("setButton(4)",200);
+			});
 
+	  </script>
     </div>
   </body>
 </html>

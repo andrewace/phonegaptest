@@ -24,16 +24,18 @@
       </div>
 
       <div data-role="content" data-iscroll>
-         <ul id="schoolInfoList" data-role="listview"></ul>
+         <ul id="schoolInfoList" data-role="listview">
+         <li id="loadingmsg"></li>
+         </ul>
       </div>
 
       <div data-role="footer" class="ui-bar" data-position="inline" id="my-persistent-footer">
         <div data-role="navbar" class="ui-navbar">
           <ul class="ui-grid-b">
-            <li><a href="index.html" data-icon="star" data-prefetch data-transition="none">Classes</a></li>
-            <li><a href="newsletter.html" data-icon="star" data-prefetch data-transition="none">Newsletter</a></li>
-            <li><a href="schoolinfo.html" data-icon="star" data-prefetch data-transition="none" class="ui-btn-active">School Info</a></li>
-            <li><a href="contact.html" data-icon="star" data-prefetch data-transition="none">Contact</a></li>
+            <li><a id="navbutton1" href="index.html" data-icon="star" data-prefetch data-transition="none">Classes</a></li>
+            <li><a id="navbutton2" href="newsletter.html" data-icon="star" data-prefetch data-transition="none">Newsletter</a></li>
+            <li><a id="navbutton3" href="schoolinfo.html" data-icon="star" data-prefetch data-transition="none" class="ui-btn-active">School Info</a></li>
+            <li><a id="navbutton4" href="contact.html" data-icon="star" data-prefetch data-transition="none">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -41,6 +43,11 @@
 	  <script type="text/javascript">
 			$("#infoPage").live('pageinit', function() {
 				getInfoList();
+				setTimeout("adjustHeights('infoPage');",1000);
+			});
+			$("#infoPage").live('pageshow', function() {
+				adjustHeights('infoPage');
+				setTimeout("setButton(3)",200);
 			});
 	  </script>
 

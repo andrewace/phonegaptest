@@ -17,11 +17,11 @@
   </head>
 
   <body>
-    <div id="postListPage" data-role="page" data-add-back-btn="true" data-dom-cache="true">
+    <div id="postListPage" data-role="page" data-dom-cache="true">
 
       <div data-role="header" data-theme="a" data-position="fixed">
         <h1 id="categoryname">&nbsp;</h1>
-        <a href="javascript:history.back(1)" data-icon="arrow-l" data-rel="back" class="ui-btn-left">Back</a>
+        <a id="backbutton" href="index.html" data-direction="reverse" data-prefetch data-icon="arrow-l" class="ui-btn-left">Back</a>
       </div>
 
       <div data-role="content" data-iscroll>
@@ -37,9 +37,9 @@
 				var id = urlvars["id"];
 				pagetitle=decodeURI(urlvars["title"])
 				pagetitle=pagetitle.replace("%26","&");
-
 				$('.ui-page-active #categoryname').html(pagetitle);
 				$.getJSON(siteURL + postPath + id + '/?api=1&category=' + id, getPostList);
+				setTimeout('setBackURL()',1000)
 			});
 
 			$('#postListPage').live('pagehide', function(event, ui) {

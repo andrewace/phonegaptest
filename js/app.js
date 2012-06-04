@@ -89,22 +89,11 @@ function getInfoList() {
 					'<h4>' + page.post_title + '</h4></a></li>');
 		});
 
-		$('#schoolInfoList').append('<li><a href="posts.html?id=clubs&title=Sports%20%26%20Clubs"><h4>Sports &amp; Clubs</h4></a></li>');
-		$('#schoolInfoList').append('<li><a href="posts.html?id=events&title=Events"><h4>Fundraising &amp; Events</h4></a></li>');
+		$('#schoolInfoList').append('<li><a href="posts.html?id=clubs&return=schoolinfo.html&title=Sports%20%26%20Clubs"><h4>Sports &amp; Clubs</h4></a></li>');
+		$('#schoolInfoList').append('<li><a href="posts.html?id=events&return=schoolinfo.html&title=Events"><h4>Fundraising &amp; Events</h4></a></li>');
 
 		$('#schoolInfoList').listview('refresh');
 		$(".ui-page div.ui-content").iscrollview();
-		
-		var numelements=$("#schoolInfoList .ui-link-inherit").length;
-		var boxheight=$("div.ui-content").height();	
-		
-		var elemheight=Math.round(boxheight/numelements);
-		var elempadding=Math.round((elemheight-40)/2);
-		if (elempadding<0) { elempadding=0; }
-		
-		$("#schoolInfoList a.ui-link-inherit").css("padding-top",elempadding+"px");
-		$("#schoolInfoList a.ui-link-inherit").css("padding-bottom",elempadding+"px");
-		$("#schoolInfoList div.ui-btn-inner").css("height",elemheight+"px");		
 		
 	});
 } 
@@ -240,3 +229,39 @@ function getSinglePage(data) {
 
 } 
 
+function setButton(num) {
+
+		var buttonclass=$('.ui-page-active #navbutton'+num).attr('class')		
+		buttonclass=buttonclass.replace("ui-btn-up-a","");
+		buttonclass=buttonclass.replace("ui-btn-up","");
+		buttonclass=buttonclass.replace("ui-btn-active","");
+		buttonclass+=" ui-btn-active"
+		$('.ui-page-active #navbutton'+num).attr('class',buttonclass);
+}
+
+
+function adjustHeights(pagename) {
+
+		pagename="#"+pagename;
+		var numelements=$(pagename+" .ui-listview .ui-link-inherit").length;
+		var boxheight=$(pagename+" div.ui-content").height();	
+		
+		var elemheight=Math.round(boxheight/numelements);
+		var elempadding=Math.round((elemheight-40)/2);
+		if (elempadding<0) { elempadding=0; }
+		
+		$(pagename+" .ui-listview a.ui-link-inherit").css("padding-top",elempadding+"px");
+		$(pagename+" .ui-listview a.ui-link-inherit").css("padding-bottom",elempadding+"px");
+		$(pagename+" .ui-listview div.ui-btn-inner").css("height",elemheight+"px");
+		
+}
+
+function setBackURL() {
+
+
+		var urlvars = getUrlVars()
+		var returnurl = urlvars["return"];
+		if (returnurl && returnurl!="") {
+			$('.ui-page-active #backbutton').attr('href',returnurl)
+		}
+}
