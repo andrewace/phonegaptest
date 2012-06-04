@@ -201,6 +201,7 @@ function getSinglePost(data) {
 		$('.ui-page-active #avatar').html(thepost.avatar);
 		$('.ui-page-active #postImage').html(thepost.image); 
 		$('.ui-page-active #gallery').html(thepost.gallery); 
+		$('.ui-page-active #attachments').html(thepost.attachments); 
 	});
 	
 	if ($('.ui-page-active #gallery').html()!="") { 
@@ -225,6 +226,7 @@ function getSinglePage(data) {
 		$('.ui-page-active #postContent').html(thepage.content);
 		$('.ui-page-active #postImage').html(thepage.image); 
 		$('.ui-page-active #gallery').html(thepage.gallery); 
+		$('.ui-page-active #attachments').html(thepage.attachments); 
 	});
 	
 	if ($('.ui-page-active #gallery').html()!="") { 

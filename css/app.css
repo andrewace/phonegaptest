@@ -247,7 +247,7 @@ div.ui-content {
 
 }
 
-.ui-btn-corner-all {
+.ui-header .ui-btn-corner-all {
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
@@ -460,3 +460,13 @@ div.attachments img {
 
 }
 
+#attachments {
+	margin-top:20px;
+}
+
+#attachments span.ui-btn-text{
+	
+	font-size:13px;
+	text-transform:capitalize;
+
+}
