@@ -271,9 +271,10 @@ span.latestnews {
 	background-position-x: 50%;	
 }
 
-#infoViewPage #loadingmsg {
+#infoViewPage #loadingmsg,#postViewPage #loadingmsg {
 
 	margin-top: -15px;
+	margin-left: 15px;
 }
 
 .imggallery img {
