@@ -265,9 +265,7 @@ span.latestnews {
 	list-style:none;
 	margin:0;
 	padding:0;
-	margin-left:-15px;
-	margin-top:-15px;
-	border-bottom:0;
+	border-bottom:0; 
 	background-repeat: no-repeat;
 	background-color: transparent;
 	background-position-x: 50%;	
