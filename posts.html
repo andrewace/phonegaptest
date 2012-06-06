@@ -32,14 +32,15 @@
 
 	  <script type="text/javascript">
 
-			$('#postListPage').live('pageshow', function(event) {
+			$('#postListPage').live('pageshow', function(event, ui) {
+
 				var urlvars = getUrlVars()
 				var id = urlvars["id"];
 				pagetitle=decodeURI(urlvars["title"])
 				pagetitle=pagetitle.replace("%26","&");
 				$('.ui-page-active #categoryname').html(pagetitle);
 				$.getJSON(siteURL + postPath + id + '/?api=1&category=' + id, getPostList);
-				setTimeout('setBackURL()',1000)
+				setTimeout('setBackURL()',500)
 			});
 
 			$('#postListPage').live('pagehide', function(event, ui) {
