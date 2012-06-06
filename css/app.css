@@ -96,7 +96,7 @@ span.latestnews {
 } 
 
 
-div.ui-content {
+.ui-page {
 
 	background-image:url(../icons/paper.jpg);
 }
@@ -267,6 +267,10 @@ div.ui-content {
 	padding:0;
 	margin-left:-15px;
 	margin-top:-15px;
+	border-bottom:0;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-position-x: 50%;	
 }
 
 .imggallery img {
