@@ -58,15 +58,11 @@
 			var options = {};
 			var photoSwipeInstance;
 
-
 			$('#infoViewPage').live('pageshow', function(event) {
 				var urlvars = getUrlVars()
-
 				currentPage = $(event.target);
 				theTarget = event.target;
-
 				$.getJSON(siteURL + pagePath + urlvars["id"] + '?api=1', getSinglePage);
-
 				currentPage.attr('pagename', urlvars["id"]);
 
 			});
