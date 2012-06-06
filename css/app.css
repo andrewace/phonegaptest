@@ -376,8 +376,13 @@ div.attachments img {
 .ui-footer .ui-navbar .ui-btn-text {
 
 	top:3px;
+	color:#dddddd;
 
 }
+
+.ui-footer .ui-navbar .ui-btn-active .ui-btn-text {
+	color:#ffffff;
+} 
 
 .ui-footer {
 
@@ -425,44 +430,44 @@ div.attachments img {
 
 }
 
-.ui-footer .ui-block-a .ui-btn-inner .ui-icon {
+.ui-footer .ui-block-a .ui-btn-inner .ui-icon-custom {
 
 	width: 50px;
 	height: 27px;
-	background: url(images/123.png);
+	background: url(../icons/123.png);
 	background-repeat:no-repeat;
 	margin-left: -18px;	
 
 }
 
 
-.ui-footer .ui-block-b .ui-btn-inner .ui-icon {
+.ui-footer .ui-block-b .ui-btn-inner .ui-icon-custom {
 
 	width: 30px;
 	height: 28px;
-	background: url(images/news.png);
+	background: url(../icons/news.png);
 	background-repeat:no-repeat;
 	margin-left: -16px;
 	opacity: 0.8;
 
 }
 
-.ui-footer .ui-block-c .ui-btn-inner .ui-icon {
+.ui-footer .ui-block-c .ui-btn-inner .ui-icon-custom {
 
 	width: 26px;
 	height: 26px;
-	background: url(images/info.png);
+	background: url(../icons/info.png);
 	background-repeat:no-repeat;
 	margin-left: -13px;
 
 }
 
 
-.ui-footer .ui-block-d .ui-btn-inner .ui-icon {
+.ui-footer .ui-block-d .ui-btn-inner .ui-icon-custom {
 
 	width: 27px;
 	height: 27px;
-	background: url(images/phone.png);
+	background: url(../icons/phone.png);
 	background-repeat:no-repeat;
 	margin-left: -12px;
 
