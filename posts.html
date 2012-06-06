@@ -39,7 +39,7 @@
 				pagetitle=decodeURI(urlvars["title"])
 				pagetitle=pagetitle.replace("%26","&");
 				$('.ui-page-active #categoryname').html(pagetitle);
-				$.getJSON(siteURL + postPath + id + '/?api=1&category=' + id, getPostList);
+				//$.getJSON(siteURL + postPath + id + '/?api=1&category=' + id, getPostList);
 				setTimeout('setBackURL()',500)
 			});
 
