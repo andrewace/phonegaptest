@@ -28,7 +28,7 @@
 		</div>
 
 		<div>
-			<img id="mainphoto" src="photos/1.jpg" width="288"><br />
+			<img id="mainphoto" src="photos/1.jpg"><br />
 
 
 			<ul id="latestheader" data-role="listview" data-inset="true" data-dividertheme="b">
@@ -37,11 +37,7 @@
 
 			<div id="wrapper">
 				<div id="scroller">
-					<ul id="thelist">
-						<li><strong>1.</strong> <em>A robot may not injure a human being or, through inaction, allow a human being to come to harm.</em></li>
-						<li><strong>2.</strong> <em>A robot must obey any orders given to it by human beings, except where such orders would conflict with the First Law.</em></li>
-						<li><strong>3.</strong> <em>A robot must protect its own existence as long as such protection does not conflict with the First or Second Law.</em></li>
-					</ul>
+					<ul id="latestList"></ul>
 				</div>
 			</div>
 
@@ -50,6 +46,8 @@
 					<li class="active">1</li>
 					<li>2</li>
 					<li>3</li>
+					<li>4</li>
+					<li>5</li>
 				</ul>
 			</div>
 		</div>
@@ -71,6 +69,7 @@
 			$("#homepage").live('pageshow', function() {
 				var randomnum = Math.floor(Math.random() * 6) + 1
 				$("#mainphoto").attr('src',"photos/"+randomnum+".jpg")
+				getLatest();
 			    var myScroll;
 				myScroll = new iScroll('wrapper', {
 					snap: true,

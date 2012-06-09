@@ -1,6 +1,7 @@
 var siteURL = "http://www.frontstreetprimary.co.uk";
 var apiPath = "/mobile/api/";
 var postPath = "/news/age/";
+var latestPath = "/latest/";
 var pagePath = "/school-information/";
 var imgPath = "/wp-content/uploads/";
 
@@ -266,3 +267,19 @@ function setBackURL() {
 			$('.ui-page-active #backbutton').attr('href',returnurl)
 		}
 }
+
+function getLatest() {
+
+	$.getJSON(siteURL + latestPath + '?api=1', function(data) {
+		$('#latestList li').remove();
+		latestitems = data.items;
+		
+		$.each(latestitems, function(index, latestitem) {
+		
+			$('#latestList').append('<li><a data-ajax="false" rel="external" href="viewpost.html?link=' + latestitem.link + '&category=Latest&return=' + escape(document.location.href) + '">' + latestitem.title + '</a><span>' + latestitem.date + '<span></li>');
+		});
+
+		$('#latestList').listview('refresh');
+		
+	});
+} 

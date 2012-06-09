@@ -477,11 +477,14 @@ div.attachments img {
 	margin-top:20px;
 }
 
-#attachments span.ui-btn-text{
+#attachments span.ui-btn-text {
 	
 	font-size:13px;
 	text-transform:capitalize;
+}
 
+#attachments span.ui-btn-inner {
+	padding: .5em 25px .7em 25px;
 }
 
 #mainphoto {
@@ -492,6 +495,8 @@ div.attachments img {
 	box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
 	border-color: white;
 	border-width: 2px;
+	width:90%;
+	max-height:40%;
 }
 
 #wrapper {
@@ -517,7 +522,7 @@ div.attachments img {
 }
 
 #scroller {
-	width:300%;
+	width:500%;
 	height:100%;
 	float:left;
 	padding:0;
@@ -541,12 +546,30 @@ div.attachments img {
 	box-sizing:border-box;
 	display:block; 
 	float:left;
-	width:33.33%; 
+	width:20%; 
 	height:65px;
-	text-align:center;
-	font-family:georgia;
+	font-size:14px;
+	text-shadow: -1px 1px 0 white;
+	font-size: 15px;
+}
+
+#scroller li a {
+	display:block;
+	margin-top: 12px;
+	margin-left: 15px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	font-weight:bold;
+	text-decoration:none;
+	color:#222222;
+}
+
+
+#scroller li span {
 	font-size:10px;
-	line-height:140%;
+	font-weight:normal;
+	margin-top: 8px;
+	margin-left: 15px;
 }
 
 #nav {
@@ -563,7 +586,7 @@ div.attachments img {
 }
 
 #indicator {
-	width: 33px;
+	width: 57px;
 	margin: auto;
 	margin-top: 12px;
 	text-align: center;
@@ -628,4 +651,10 @@ div.attachments img {
 #latestheader li {
 	border-radius: 10px 10px 0 0;
 	background-image: -webkit-linear-gradient(#900, #600);
+	font-family: "TOONISH",Arial,Helvetica,sans-serif;
+	line-height: 14px;
+	font-weight: normal;
+	font-size: 17px;
+	padding-top: 9px;
+	padding-bottom: 7px;
 } 
