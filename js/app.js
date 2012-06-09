@@ -165,11 +165,7 @@ function getPostList(data) {
 	posts = data.items;
 	$('.ui-page-active #postList li').remove();
 	$.each(posts, function(index, post) {
-<<<<<<< HEAD
 		$('.ui-page-active #postList').append('<li><a data-ajax="false" rel="external" href="viewpost.html?link=' + post.link + '&category=' + getUrlVars()['title'] + '">' +
-=======
-		$('.ui-page-active #postList').append('<li><a rel="external" data-ajax="false" href="viewpost.html?link=' + post.link + '&category=' + getUrlVars()['title'] + '&return=' + escape(document.location.href) + '">' +
->>>>>>> 008094053944511faf37e66bbc0206b91a6620d1
 		post.image +
 		'<h4>' + post.title + '</h4>' +
 		'<p>' + post.date + '</p>' +
@@ -266,8 +262,6 @@ function setBackURL() {
 		var urlvars = getUrlVars()
 		var returnurl = urlvars["return"];
 		if (returnurl && returnurl!="") {
-			returnurl = unescape(returnurl);
 			$('.ui-page-active #backbutton').attr('href',returnurl)
 		}
 }
-
