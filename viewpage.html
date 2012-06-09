@@ -51,6 +51,10 @@
 
       </div>
 
+	  <link type="text/css" rel="stylesheet" href="css/photoswipe.css" />
+	  <script type="text/javascript" src="js/klass.min.js"></script>
+	  <script type="text/javascript" src="js/code.photoswipe.jquery-3.0.4.min.js"></script>
+
 	  <script type="text/javascript">
 
 			var currentPage ;
@@ -58,15 +62,11 @@
 			var options = {};
 			var photoSwipeInstance;
 
-
 			$('#infoViewPage').live('pageshow', function(event) {
 				var urlvars = getUrlVars()
-
 				currentPage = $(event.target);
 				theTarget = event.target;
-
 				$.getJSON(siteURL + pagePath + urlvars["id"] + '?api=1', getSinglePage);
-
 				currentPage.attr('pagename', urlvars["id"]);
 
 			});
@@ -78,7 +78,6 @@
 						$('#infoViewPage').die(photoSwipeInstance);
 					}
 			});
-
 
 	  </script>
 

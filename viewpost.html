@@ -20,11 +20,12 @@
   </head>
 
   <body>
-    <div id="postViewPage" data-role="page" pagename="unset" data-add-back-btn="true">
+    <div id="postViewPage" data-role="page" pagename="unset">
 
       <div data-role="header" data-theme="a" data-position="fixed">
         <h1 id="categoryname">&nbsp;</h1>
-        <a href="javascript:history.back(1)" data-icon="arrow-l" data-rel="back" class="ui-btn-left">Back</a>
+        <a id="backbutton" href="categories.html" data-direction="reverse" data-prefetch data-icon="arrow-l" class="ui-btn-left">Back</a>
+
       </div>
 
       <div data-role="content" data-iscroll>
@@ -80,6 +81,7 @@
 				$.getJSON(siteURL + urlvars["link"] + '?api=1', getSinglePost);
 
 				currentPage.attr('pagename', urlvars["link"]+urlvars["category"]);
+				setTimeout('setBackURL()',500)
 
 			});
 
