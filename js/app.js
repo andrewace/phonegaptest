@@ -276,10 +276,22 @@ function getLatest() {
 		
 		$.each(latestitems, function(index, latestitem) {
 		
-			$('#latestList').append('<li><a data-ajax="false" rel="external" href="viewpost.html?link=' + latestitem.link + '&category=Latest&return=' + escape(document.location.href) + '">' + latestitem.title + '</a><span>' + latestitem.date + '<span></li>');
+			$('#latestList').append('<li><a data-ajax="false" rel="external" href="viewpost.html?link=' + latestitem.link + '&category=Latest&return=' + escape(document.location.href) + '"><strong>' + latestitem.title + '</strong><span>' + latestitem.date + '<span></a></li>');
 		});
 
-		$('#latestList').listview('refresh');
-		
 	});
 } 
+
+function nextStory() {
+
+   if (!hasScrolled) {
+	if (scrollcounter==5) { myScroll.scrollToPage(0,0); scrollcounter=0; }
+	scrollcounter++;
+	setTimeout("if (!hasScrolled) { myScroll.scrollToPage('next',0); } nextStory()",4000);	
+   }
+}
+
+function doScroll() {
+
+	hasScrolled=true;
+}

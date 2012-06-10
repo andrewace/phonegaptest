@@ -554,22 +554,32 @@ div.attachments img {
 }
 
 #scroller li a {
+	text-decoration:none;
+	color:#222222;
+}
+
+#scroller li a:active {
+	text-decoration:underline;
+	color:#BB242D;
+}
+
+#scroller li strong {
 	display:block;
 	margin-top: 12px;
 	margin-left: 15px;
 	overflow:hidden;
 	text-overflow:ellipsis;
 	font-weight:bold;
-	text-decoration:none;
-	color:#222222;
 }
 
 
 #scroller li span {
+	display:block;
 	font-size:10px;
 	font-weight:normal;
-	margin-top: 8px;
+	margin-top: 4px;
 	margin-left: 15px;
+	width:100%;
 }
 
 #nav {

@@ -35,7 +35,7 @@
 			<li data-role="list-divider" role="heading" class="ui-li ui-li-divider ui-bar-b ui-corner-top">Latest</li>
 			</ul>
 
-			<div id="wrapper">
+			<div id="wrapper" onmousedown="doScroll()">
 				<div id="scroller">
 					<ul id="latestList"></ul>
 				</div>
@@ -66,11 +66,13 @@
       </div>
 
 	  <script type="text/javascript">
+			var myScroll;
+			var scrollcounter;
+			var hasScrolled;
 			$("#homepage").live('pageshow', function() {
 				var randomnum = Math.floor(Math.random() * 6) + 1
 				$("#mainphoto").attr('src',"photos/"+randomnum+".jpg")
 				getLatest();
-			    var myScroll;
 				myScroll = new iScroll('wrapper', {
 					snap: true,
 					momentum: false,
@@ -80,8 +82,17 @@
 						document.querySelector('#indicator > li:nth-child(' + (this.currPageX+1) + ')').className = 'active';
 					}
 				 });
+				 scrollcounter=0;
+				 myScroll.scrollToPage(0,0);
+				 hasScrolled=false;
 				$(".ui-page-active div.ui-content").iscrollview();
+				setTimeout("nextStory()",2000);
 			});
+			$("#homepage").live('pagehide', function() {
+				myScroll.destroy();
+				myScroll = null;
+			});
+
 	  </script>
 
     </div>
