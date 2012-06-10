@@ -599,7 +599,7 @@ div.attachments img {
 	width: 57px;
 	margin: auto;
 	margin-top: 12px;
-	margin-bottom:15px;
+	padding-bottom:15px;
 	text-align: center;
 	float: none;	
 }
