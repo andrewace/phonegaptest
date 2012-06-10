@@ -194,8 +194,9 @@ function getSinglePost(data) {
 		$('.ui-page-active #attachments').html(thepost.attachments); 
 	});
 	
-	$(".ui-page-active #loadingmsg").remove();
-	$(".ui-page-active #singleContent").attr('style', 'display:block');
+	//$(".ui-page-active #loadingmsg").remove();
+	//$(".ui-page-active #singleContent").attr('style', 'display:block');
+	
 	$(".ui-page-active div.ui-content").iscrollview();
 
 	if ($('.ui-page-active #gallery').html()!="") {
@@ -224,7 +225,6 @@ function getSinglePage(data) {
 	
 	$(".ui-page-active #loadingmsg").remove();
 	$(".ui-page-active #singleContent").attr('style', 'display:block');
-	alert($(".ui-page-active #singleContent").attr('style'));
 
 	$(".ui-page div.ui-content").iscrollview();
 
