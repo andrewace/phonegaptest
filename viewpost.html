@@ -57,7 +57,7 @@
 			var options = {};
 			var photoSwipeInstance;
 
-			$('#postViewPage').live('pageshow', function(event) {
+			$('#postViewPage').live('pagebeforeshow', function(event) {
 				var urlvars = getUrlVars()
 				pagetitle=decodeURI(urlvars["category"])
 				pagetitle=pagetitle.replace("%26","&");
@@ -72,6 +72,20 @@
 				setTimeout('setBackURL()',500)
 
 			});
+
+
+			$('#postViewPage').live('pageshow', function(event) {
+
+				$(".ui-page-active #loadingmsg").remove();
+				$(".ui-page-active #singleContent").attr('style', 'display:block');
+				$(".ui-page-active div.ui-content").iscrollview();
+
+				if ($('.ui-page-active #gallery').html()!="") {
+					photoSwipeInstance = $("div.imggallery a", theTarget).photoSwipe(options,  currentPage.attr('pagename'));
+				}
+
+			});
+
 
 			$('#postViewPage').live('pagehide', function(event, ui) {
 
