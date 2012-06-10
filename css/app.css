@@ -261,7 +261,7 @@ span.latestnews {
 #loadingmsg {
 
 	background-image:url(../icons/loadingbg.png);
-	height:378px;
+	height:365px;
 	list-style:none;
 	margin:0;
 	padding:0;
@@ -674,3 +674,7 @@ div.attachments img {
 	height:46px;
 }
 
+#categoryList a.ui-link-inherit,#newsletterList a.ui-link-inherit,#schoolInfoList a.ui-link-inherit {
+	padding-top:2px;
+	padding-bottom:2px;
+}
