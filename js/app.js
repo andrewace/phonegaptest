@@ -192,13 +192,13 @@ function getSinglePost(data) {
 		$('.ui-page-active #postImage').html(thepost.image); 
 		$('.ui-page-active #gallery').html(thepost.gallery); 
 		$('.ui-page-active #attachments').html(thepost.attachments); 
+		$(".ui-page-active div.ui-content").iscrollview();
+
 	});
 	
-	//$(".ui-page-active #loadingmsg").remove();
-	//$(".ui-page-active #singleContent").attr('style', 'display:block');
+	$(".ui-page-active #loadingmsg").remove();
+	$(".ui-page-active #singleContent").attr('style', 'display:block');
 	
-	$(".ui-page-active div.ui-content").iscrollview();
-
 	if ($('.ui-page-active #gallery').html()!="") {
 		photoSwipeInstance = $("div.imggallery a", theTarget).photoSwipe(options,  currentPage.attr('pagename'));
 	}	
