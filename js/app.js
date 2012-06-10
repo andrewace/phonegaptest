@@ -202,7 +202,7 @@ function getSinglePost(data) {
 		photoSwipeInstance = $("div.imggallery a", theTarget).photoSwipe(options,  currentPage.attr('pagename'));
 	}	
 
-} 
+}
 
 
 function getSinglePage(data) {
@@ -224,6 +224,7 @@ function getSinglePage(data) {
 	
 	$(".ui-page-active #loadingmsg").remove();
 	$(".ui-page-active #singleContent").attr('style', 'display:block');
+	alert($(".ui-page-active #singleContent").attr('style'));
 
 	$(".ui-page div.ui-content").iscrollview();
 
