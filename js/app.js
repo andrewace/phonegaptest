@@ -201,7 +201,7 @@ function getSinglePost(data) {
 	$(".ui-page-active #loadingmsg").remove();
 	$(".ui-page-active #singleContent").attr('style', 'display:block');
 
-	$(".ui-page div.ui-content").iscrollview();
+	$(".ui-page-active div.ui-content").iscrollview();
 
 } 
 
