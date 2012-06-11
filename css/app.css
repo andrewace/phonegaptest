@@ -271,6 +271,10 @@ span.latestnews {
 	background-position-x: 50%;	
 }
 
+#loadingmsg.none {
+	background-image:url(../icons/notconnected.png) !important;
+}
+
 #infoViewPage #loadingmsg,#postViewPage #loadingmsg {
 
 	margin-top: -15px;
