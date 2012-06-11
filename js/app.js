@@ -19,12 +19,17 @@ function onDeviceReady() {
 }
 
 function checkConnection() {
-	var networkState = navigator.network.connection.type;
-	if (networkState==Connection.ETHERNET || networkState==Connection.WIFI || networkState==Connection.CELL_4G) { connectionType="fast" }
-	if (networkState==Connection.CELL_2G || networkState==Connection.CELL_3G) { connectionType="slow" }
-	if (networkState==Connection.UNKNOWN || networkState==Connection.NONE) { connectionType="none" }
+	var networkState;
+	try {
+		networkState = navigator.network.connection.type; 
+		if (networkState==Connection.ETHERNET || networkState==Connection.WIFI || networkState==Connection.CELL_4G) { connectionType="fast" }
+		if (networkState==Connection.CELL_2G || networkState==Connection.CELL_3G) { connectionType="slow" }
+		if (networkState==Connection.UNKNOWN || networkState==Connection.NONE) { connectionType="none" }
+	} catch(err) {}
 	
-	$("#loadingmsg").attr('class', connectionType);
+	$("#categoryList #loadingmsg").attr('class', connectionType);
+	$("#newsletterList #loadingmsg").attr('class', connectionType);
+	$("#schoolInfoList #loadingmsg").attr('class', connectionType);
 }
 
 
