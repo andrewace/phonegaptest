@@ -269,10 +269,15 @@ span.latestnews {
 	background-repeat: no-repeat;
 	background-color: transparent;
 	background-position-x: 50%;	
+	background-position-y: 50%;	
 }
 
 #loadingmsg.none {
 	background-image:url(../icons/notconnected.png) !important;
+}
+
+#loadingmsg.slow {
+	background-image:url(../icons/loadingslow.png) !important;
 }
 
 #infoViewPage #loadingmsg,#postViewPage #loadingmsg {
@@ -436,46 +441,79 @@ div.attachments img {
 
 .ui-footer .ui-block-a .ui-btn-inner .ui-icon-custom {
 
-	width: 50px;
-	height: 27px;
-	background: url(../icons/123.png);
+	width: 30px;
+	height: 24px;
+	background: url(../icons/schoolhaticon.png);
 	background-repeat:no-repeat;
-	margin-left: -18px;	
+	margin-left: -13px;	
+	border-radius:0;
+	background-size:30px 24px;	
 
 }
 
+
+.ui-footer .ui-block-a .ui-btn-active .ui-btn-inner .ui-icon-custom,.ui-footer .ui-block-a a:hover .ui-icon-custom,.ui-footer .ui-block-a a:active .ui-icon-custom {
+
+	background: url(../icons/schoolhatselected.png);
+
+} 
 
 .ui-footer .ui-block-b .ui-btn-inner .ui-icon-custom {
 
-	width: 30px;
-	height: 28px;
-	background: url(../icons/news.png);
+	width: 29px;
+	height: 25px;
+	background: url(../icons/newsicon.png);
 	background-repeat:no-repeat;
-	margin-left: -16px;
+	background-size:29px 25px;
+	margin-left: -13px;
 	opacity: 0.8;
+	border-radius:0;
 
 }
+
+.ui-footer .ui-block-b .ui-btn-active .ui-btn-inner .ui-icon-custom,.ui-footer .ui-block-b a:hover .ui-icon-custom,.ui-footer .ui-block-b a:active .ui-icon-custom {
+
+	background: url(../icons/newsselected.png);
+
+} 
+
 
 .ui-footer .ui-block-c .ui-btn-inner .ui-icon-custom {
 
 	width: 26px;
 	height: 26px;
-	background: url(../icons/info.png);
+	background: url(../icons/infoicon.png);
 	background-repeat:no-repeat;
-	margin-left: -13px;
+	background-size:26px 26px;
+	margin-left: -13px; 
+	border-radius:0;
 
 }
 
+.ui-footer .ui-block-c .ui-btn-active .ui-btn-inner .ui-icon-custom,.ui-footer .ui-block-c a:hover .ui-icon-custom,.ui-footer .ui-block-c a:active .ui-icon-custom {
+
+	background: url(../icons/infoiconselected.png);
+
+}
 
 .ui-footer .ui-block-d .ui-btn-inner .ui-icon-custom {
 
-	width: 27px;
-	height: 27px;
-	background: url(../icons/phone.png);
+	width: 26px;
+	height: 26px;
+	background: url(../icons/phoneicon.png);
 	background-repeat:no-repeat;
+	background-size:26px 26px;
 	margin-left: -12px;
+	border-radius:0;
 
 }
+
+.ui-footer .ui-block-d .ui-btn-active .ui-btn-inner .ui-icon-custom,.ui-footer .ui-block-d a:hover .ui-icon-custom,.ui-footer .ui-block-d a:active .ui-icon-custom {
+
+	background: url(../icons/phoneselected.png);
+
+}
+
 
 #attachments {
 	margin-top:20px;
