@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns		= "http://www.w3.org/ns/widgets"
 	xmlns:gap	= "http://phonegap.com/ns/1.0"
-	id		= "com.offexploring.phonegaptest"
+	id		= "com.instantapps.frontstreet"
 	version 	= "1.0.0">
 
 	<name>Front Street</name>
 
 	<description>
-		This is my first ever PhoneGap app
+		Front Street Primary School
 	</description>
 
-	<author href="http://www.andrewace.com"
-		email="web@andrewace.com">
-		Andrew Ace
+	<author href="http://www.instantapps.co.uk"
+		email="sales@instantapps.co.uk">
+		Instant Apps
 	</author>
 
 	<icon src="icon.png" gap:role="default" />
