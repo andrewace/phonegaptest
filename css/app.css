@@ -741,7 +741,7 @@ div.attachments img {
 	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .3) !important;
 }
 
-#refreshbutton:hover,#backbutton:hover,.ui-header a:hover,.ui-page-active #refreshbutton:active,.ui-page-active #backbutton:active,.ui-page-active .ui-header a:active,.ui-page-active .ui-header a.ui-btn-active {
+.ui-page-active #refreshbutton:hover,.ui-page-active #backbutton:hover,.ui-page-active .ui-header a:hover,.ui-page-active .ui-header a.ui-btn-active {
 
 	background: #900 !important;
 }
