@@ -732,3 +732,16 @@ div.attachments img {
 
 	padding-botttom:60px;
 }
+
+#refreshbutton,#backbutton,.ui-header a {
+	
+	border:0;
+	background:none;
+	-webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .3) !important;
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .3) !important;
+}
+
+#refreshbutton:hover,#backbutton:hover,.ui-header a:hover,#refreshbutton:active,#backbutton:active,.ui-header a:active,.ui-header a.ui-btn-active {
+
+	background: #900 !important;
+}
