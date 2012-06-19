@@ -741,7 +741,11 @@ div.attachments img {
 	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .3) !important;
 }
 
-#refreshbutton:hover,#backbutton:hover,.ui-header a:hover,#refreshbutton:active,#backbutton:active,.ui-header a:active,.ui-header a.ui-btn-active {
+#refreshbutton:hover,#backbutton:hover,.ui-header a:hover,#refreshbutton:active,#backbutton:active,.ui-header a:active {
 
 	background: #900 !important;
+}
+
+#refreshbutton {
+	margin-top: 2px;
 }
