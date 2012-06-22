@@ -452,7 +452,7 @@ div.attachments img {
 }
 
 
-.ui-footer .ui-block-a .ui-btn-active .ui-btn-inner .ui-icon-custom,.ui-footer .ui-block-a a:hover .ui-icon-custom,.ui-footer .ui-block-a a:active .ui-icon-custom {
+.ui-footer .ui-block-a .ui-btn-active .ui-btn-inner .ui-icon-custom,.ui-footer .ui-block-a a:active .ui-icon-custom {
 
 	background: url(../icons/schoolhatselected.png);
 
@@ -471,7 +471,7 @@ div.attachments img {
 
 }
 
-.ui-footer .ui-block-b .ui-btn-active .ui-btn-inner .ui-icon-custom,.ui-footer .ui-block-b a:hover .ui-icon-custom,.ui-footer .ui-block-b a:active .ui-icon-custom {
+.ui-footer .ui-block-b .ui-btn-active .ui-btn-inner .ui-icon-custom,.ui-footer .ui-block-b a:active .ui-icon-custom {
 
 	background: url(../icons/newsselected.png);
 
@@ -490,7 +490,7 @@ div.attachments img {
 
 }
 
-.ui-footer .ui-block-c .ui-btn-active .ui-btn-inner .ui-icon-custom,.ui-footer .ui-block-c a:hover .ui-icon-custom,.ui-footer .ui-block-c a:active .ui-icon-custom {
+.ui-footer .ui-block-c .ui-btn-active .ui-btn-inner .ui-icon-custom,.ui-footer .ui-block-c a:active .ui-icon-custom {
 
 	background: url(../icons/infoiconselected.png);
 
@@ -508,7 +508,7 @@ div.attachments img {
 
 }
 
-.ui-footer .ui-block-d .ui-btn-active .ui-btn-inner .ui-icon-custom,.ui-footer .ui-block-d a:hover .ui-icon-custom,.ui-footer .ui-block-d a:active .ui-icon-custom {
+.ui-footer .ui-block-d .ui-btn-active .ui-btn-inner .ui-icon-custom,.ui-footer .ui-block-d a:active .ui-icon-custom {
 
 	background: url(../icons/phoneselected.png);
 
@@ -741,12 +741,11 @@ div.attachments img {
 	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .3) !important;
 }
 
-.ui-page-active #refreshbutton:hover,.ui-page-active #backbutton:hover,.ui-page-active .ui-header a:hover,.ui-page-active .ui-header a.ui-btn-active {
-
-	background: #900;
-}
-
 #refreshbutton {
 	margin-top: 2px;
 }
 
+.ui-page-active .ui-header a.ui-btn-active,.ui-page-active .ui-header a:active {
+
+	background: none !important;
+}
