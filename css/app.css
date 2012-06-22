@@ -747,5 +747,9 @@ div.attachments img {
 
 .ui-page-active .ui-header a.ui-btn-active,.ui-page-active .ui-header a:active {
 
-	background: none !important;
+	background: #600 !important;
+}
+
+.ui-page-active .ui-header a.ui-btn-active span.ui-btn-inner,.ui-page-active .ui-header a:active span.ui-btn-inner {
+	border-top: 1px solid #400;
 }

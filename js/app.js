@@ -250,13 +250,6 @@ function setButton(num) {
 		buttonclass+=" ui-btn-active"
 		$('.ui-page-active #navbutton'+num).attr('class',buttonclass);
 
-		var headerclass=$('.ui-page-active .ui-header .ui-btn-left').attr('class')		
-		headerclass=headerclass.replace("ui-btn-hover-a","");
-		headerclass=headerclass.replace("ui-btn-active-a","");
-		headerclass=headerclass.replace("ui-btn-up-a","");
-		headerclass+=" ui-btn-up-a"
-		$('.ui-page-active .ui-header .ui-btn-left').attr('class',headerclass);
-
 }
 
 
