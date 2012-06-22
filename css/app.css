@@ -745,11 +745,11 @@ div.attachments img {
 	margin-top: 2px;
 }
 
-.ui-page-active .ui-header a.ui-btn-active,.ui-page-active .ui-header a:active {
+.ui-page-active .ui-header a.ui-btn-active,.ui-page-active .ui-header a:active,#refreshbutton:hover {
 
 	background: #600 !important;
 }
 
-.ui-page-active .ui-header a.ui-btn-active span.ui-btn-inner,.ui-page-active .ui-header a:active span.ui-btn-inner {
+.ui-page-active .ui-header a.ui-btn-active span.ui-btn-inner,.ui-page-active .ui-header a:active span.ui-btn-inner,#refreshbutton:hover span.ui-btn-inner {
 	border-top: 1px solid #400;
 }
