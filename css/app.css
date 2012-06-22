@@ -736,16 +736,21 @@ div.attachments img {
 #refreshbutton,#backbutton,.ui-header a {
 	
 	border:0;
-	background:none;
+	background: #900;
 	-webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .3) !important;
 	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .3) !important;
 }
 
 .ui-page-active #refreshbutton:hover,.ui-page-active #backbutton:hover,.ui-page-active .ui-header a:hover,.ui-page-active .ui-header a.ui-btn-active {
 
-	background: #900 !important;
+	background: #900;
 }
 
 #refreshbutton {
 	margin-top: 2px;
+}
+
+.ui-page-active .ui-header a:hover {
+
+	background: none !important;
 }
