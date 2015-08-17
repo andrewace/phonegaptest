@@ -1,6 +1,8 @@
 <?php
 include '../../wp-config.php';
 
+header("Access-Control-Allow-Origin: *");
+
 $sql = "SELECT ID,post_title,post_name FROM `wp_posts` WHERE post_type='page' AND post_parent='3500' and post_status='publish' order by menu_order,post_title" ;
 
 try {
