@@ -1,6 +1,8 @@
 <?php
 include '../../wp-config.php';
 
+header("Access-Control-Allow-Origin: *");
+
 $sql = "SELECT name,slug FROM wp_term_taxonomy INNER JOIN wp_terms ON (wp_terms.term_id = wp_term_taxonomy.term_id) WHERE wp_term_taxonomy.taxonomy = 'category' AND slug!='events' AND slug!='misc' AND slug!='newsletter' AND slug!='clubs' ORDER by name" ;
 
 try {
