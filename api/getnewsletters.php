@@ -1,6 +1,8 @@
 <?php
 include '../../wp-config.php';
 
+header("Access-Control-Allow-Origin: *");
+
 $sql = "SELECT post_date,post_name,ID,guid FROM `wp_posts` WHERE post_status='publish' and post_type='post' and post_title like '%Newsletter%' order by post_date desc limit 7" ;
 
 try {
